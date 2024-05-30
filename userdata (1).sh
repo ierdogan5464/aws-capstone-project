@@ -8,11 +8,11 @@ pip3 install boto3
 apt  install awscli -y 
 cd /home/ubuntu/
 TOKEN=$(aws --region=us-east-1 ssm get-parameter --name /ishak/capstone/token --with-decryption --query 'Parameter.Value' --output text)
-git clone https://$TOKEN@github.com/ierdogan5464/aws-campstone-project.git
-cd /home/ubuntu/aws-campstone-project
+git clone https://$TOKEN@github.com/ierdogan5464/aws-capstone-project.git
+cd /home/ubuntu/aws-capstone-project
 apt-get install python3.10-dev default-libmysqlclient-dev -y 
 pip3 install -r requirements.txt 
-cd /home/ubuntu/aws-campstone-project/src
+cd /home/ubuntu/aws-capstone-project/src
 python3 manage.py collectstatic --noinput
 #python3 manage.py makemigrations
 #python3 manage.py migrate
